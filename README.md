@@ -1,4 +1,4 @@
 # CTI-Project 
 Diploma in IT - CTI - Brisbane
 
-- The school is awful no support while creating the project, sorry for mistakes
+- A escola não é boa e isso ta em português por conta de uma apresentação :)
