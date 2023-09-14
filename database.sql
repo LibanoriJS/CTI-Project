@@ -30,7 +30,8 @@ CREATE TABLE IF NOT EXISTS lpa_invoices (
     lpa_inv_client_name VARCHAR(50),
     lpa_inv_client_address VARCHAR(250),
     lpa_inv_amount DECIMAL(8,2),
-    lpa_inv_status CHAR(1)
+    lpa_inv_status CHAR(1),
+    FOREIGN KEY (lpa_inv_client_ID) REFERENCES lpa_clients(lpa_client_ID)
 );
 
 -- Create the lpa_invoice_items table
@@ -42,7 +43,9 @@ CREATE TABLE IF NOT EXISTS lpa_invoice_items (
     lpa_invitem_qty VARCHAR(6),
     lpa_invitem_stock_price DECIMAL(7,2),
     lpa_invitem_stock_amount DECIMAL(7,2),
-    lpa_inv_status CHAR(1)
+    lpa_inv_status CHAR(1),
+    FOREIGN KEY (lpa_invitem_inv_no) REFERENCES lpa_invoices(lpa_inv_no),
+    FOREIGN KEY (lpa_invitem_stock_ID) REFERENCES lpa_stock(lpa_stock_ID)
 );
 
 -- Create the lpa_users table
@@ -53,5 +56,6 @@ CREATE TABLE IF NOT EXISTS lpa_users (
     lpa_user_firstname VARCHAR(50),
     lpa_user_lastname VARCHAR(50),
     lpa_user_group VARCHAR(50),
-    lpa_inv_status CHAR(1)
+    FOREIGN KEY (lpa_user_ID) REFERENCES lpa_clients(lpa_client_ID)
+    --DROP DATABASE lpa_eComms;
 );
