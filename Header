@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your E-Commerce Store</title>
+    <title>Your CTI Store</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
     
 <body>
@@ -32,11 +33,13 @@
         </div>
 
         <div class="product">
+
             <img src="product2.jpg" alt="Product 2">
             <h2>Product 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>Price: $24.99</p>
             <button>Add to Cart</button>
+
         </div>
         <!-- Add more product listings here -->
     
